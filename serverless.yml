@@ -1,0 +1,26 @@
+service: buscaFuncionarios
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  memorySize: 256 # Overwrite the default memory size. Default is 1024
+  timeout: 30 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
+  stage: prod
+  region: us-west-2
+
+plugins:
+  - serverless-offline
+
+functions:
+  main:
+    handler: handler.main
+    events:
+      - http:
+          path: /listar
+          method: get
+      - http:
+          path: /filtrar
+          method: get
+      - http:
+          path: /
+          method: get

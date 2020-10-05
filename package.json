@@ -1,0 +1,17 @@
+{
+  "name": "buscafuncapi",
+  "version": "1.0.0",
+  "main": "buscaFuncionario.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.7.0"
+  },
+  "description": ""
+}
